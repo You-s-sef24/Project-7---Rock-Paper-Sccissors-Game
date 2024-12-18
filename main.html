@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Sccissors</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="
+    playGame('rock');
+  " class="move-button">
+        <img src="assets/imgs/rock-emoji.png" class="move-icon">
+    </button>
+
+    <button onclick="
+    playGame('paper');
+  " class="move-button">
+        <img src="assets/imgs/paper-emoji.png" class="move-icon">
+    </button>
+
+    <button onclick="
+    playGame('scissors');
+  " class="move-button">
+        <img src="assets/imgs/scissors-emoji.png" class="move-icon">
+    </button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+  " class="reset-score-button">Reset Score</button>
+
+    <button onclick="
+    autoplay();
+  " class="reset-score-button auto">Auto Play</button>
+
+
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
